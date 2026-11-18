@@ -53,3 +53,16 @@
 ## Evidence
 
 Record which pages and viewport sizes were actually inspected. Separate observed issues from assumptions. Do not mark a visual check as complete if only source code was reviewed.
+
+## Final design audit
+
+- Were all affected pages and shared components identified, rather than reviewing only the most recently edited component?
+- Were representative desktop and mobile layouts inspected in a rendered browser or screenshots?
+- Were long pages reviewed beyond the initial viewport?
+- Were key interaction states and core user flows exercised?
+- Were related pages compared for visual drift against the Design DNA?
+- Were navigation targets, links, assets, and controls checked for broken or dead behavior?
+- Were console/runtime errors and layout overflow checked where tools allow?
+- Were findings classified by severity, with critical and major issues fixed before completion?
+- Were the relevant tests rerun and the changed rendered areas inspected after fixes?
+- Are unresolved issues and unavailable verification stated explicitly?
