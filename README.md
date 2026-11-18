@@ -2,7 +2,7 @@
 
 A design skill for AI coding agents. It helps an agent understand a product before choosing a visual direction, build a coherent design system, and review the result instead of falling back on the same generic UI patterns.
 
-HumanDesign includes a reusable Agent Skill, practical design references, and optional Claude Code subagents.
+HumanDesign includes a reusable Agent Skill, practical design references, a Design DNA template, and optional Claude Code subagents.
 
 ## Install
 
@@ -29,12 +29,13 @@ Start a design task and ask your agent to use `human-design`. For example:
 Use human-design to design the dashboard for this project. Ask me about the visual direction before you start if anything important is unclear.
 ```
 
-The skill guides the agent through product discovery, visual direction, design tokens, implementation, and visual review. It adapts to the existing stack and conventions rather than forcing a framework or component library.
+For projects with multiple pages, HumanDesign can create a `design/DESIGN-DNA.md` file to keep visual decisions consistent across future work.
 
 ## What's included
 
 - A guided design interview and style selection process
 - Design references for visual directions, color, typography, and layout
+- A Design DNA guide and starter template
 - A quality checklist for reviewing real pages and screenshots
 - Three optional Claude Code subagents for research, design systems, and visual review
 
