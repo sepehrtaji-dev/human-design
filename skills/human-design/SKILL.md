@@ -92,7 +92,27 @@ Use the available browser, preview, or screenshot workflow when one exists. Insp
 
 Use `references/review-checklist.md`. Look for hierarchy, alignment, rhythm, density, contrast, responsive behavior, content fit, and consistency. Check the page against the project's Design DNA, not just generic design principles. Fix the most visible issues, then inspect again when practical.
 
-### 9. Update the Design DNA and report
+### 9. Run a final design audit and repair loop
+
+Do not stop after checking the page you just implemented. Before calling substantial UI work complete, perform one coherent pass over the affected experience as a user would encounter it.
+
+1. Identify the scope: list the changed pages, shared components, and important user flows. For a broad redesign, include the main routes rather than reviewing only the landing page.
+2. Inspect the rendered experience at representative desktop and mobile widths. Check the initial viewport and the full page; scroll through long pages. Inspect important interactive states, not only the default state.
+3. Compare related pages side by side against the Design DNA. Look for drift in typography, color roles, spacing, content width, navigation, controls, and surface treatment. Preserve intentional page-specific differences.
+4. Check functional and structural quality alongside appearance: broken or dead links, clipped or overflowing content, console/runtime errors, missing assets, unusable controls, keyboard access, focus visibility, and relevant empty, loading, and error states.
+5. Classify findings by impact:
+   - **Critical:** blocks a core task, breaks navigation, causes data loss, or makes content/control inaccessible.
+   - **Major:** clear visual inconsistency, broken responsive layout, unreadable content, or a key interaction that does not work.
+   - **Minor:** small spacing, alignment, icon, or polish issue that does not obstruct use.
+6. Fix critical and major issues before finishing. Fix minor issues when they are local and low-risk; do not expand scope into an unrequested redesign.
+7. Re-run the relevant checks and inspect the affected rendered areas again. A fix is not verified merely because the source code changed.
+8. If a finding cannot be fixed safely or needs a product decision, explain it clearly and leave it as an explicit limitation rather than silently ignoring it.
+
+For a small isolated change, keep the audit proportional: review the changed component and the surrounding page instead of traversing the whole application. If a browser or screenshot workflow is unavailable, perform a code-level audit and state that rendered verification could not be completed.
+
+Use the final-audit section in `references/review-checklist.md` as the completion gate. Report the scope inspected, findings fixed, checks rerun, and any remaining issues.
+
+### 10. Update the Design DNA and report
 
 After implementation:
 
