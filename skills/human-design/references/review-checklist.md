@@ -1,5 +1,20 @@
 # Design review checklist
 
+## Existing design diagnosis
+
+- Was the current implementation inspected before edits?
+- Is the product's purpose, audience, and primary task understood?
+- Were actual design defects distinguished from subjective style preferences?
+- Were hierarchy, composition, alignment, spacing, typography, color, contrast, density, content fit, components, imagery, responsive behavior, and usability considered?
+- Does each finding describe the affected area, its impact, and a concrete correction?
+- Were findings prioritized instead of treating every visual difference as equally important?
+- Were existing brand decisions, useful patterns, content, and working behavior preserved?
+- Were fixes made at the right level (shared token/component when appropriate) rather than through scattered overrides?
+- Was the full redesign avoided unless the user requested it or the findings justified it?
+- Were changed pages rendered and inspected again after repairs?
+- Were desktop/mobile behavior and important interactions rechecked?
+- Are limitations clearly stated when implementation or visual verification was not possible?
+
 ## Product fit
 
 - Is the primary task obvious without explanation?
