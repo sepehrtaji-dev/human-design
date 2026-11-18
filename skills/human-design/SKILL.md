@@ -40,13 +40,27 @@ Ask a short, focused set of questions when missing information would materially 
 
 If the user is unsure, offer two or three distinct visual directions with a concise explanation. Use the product context to recommend one. Do not ask questions whose answers can be found in the repository.
 
-### 3. Choose a visual direction
+### 3. Establish or load the Design DNA
+
+Before designing a new page, look for an existing project Design DNA document. The default location is `design/DESIGN-DNA.md`; if the project already has an established design-system document, use that instead of creating a competing source of truth.
+
+Follow `references/design-dna.md`:
+
+- If a Design DNA exists, read it and inspect the implementation to confirm it is still accurate. Treat confirmed decisions as constraints across pages.
+- If it does not exist, gather enough product context, define the visual direction and core rules, then create it from `examples/DESIGN-DNA.md`.
+- Mark unknown or unverified details as unresolved. Do not invent brand decisions, tokens, or behavior to make the document look complete.
+- Keep the document concise and actionable. Record decisions that affect future screens, not every one-off implementation detail.
+- Ask for confirmation only when a decision materially changes the product identity or conflicts with existing evidence.
+
+A Design DNA document is the project's persistent design contract. Read it before each substantial design task and update it when an approved decision changes. Do not silently rewrite the identity to justify a one-page variation.
+
+### 4. Choose a visual direction
 
 Use `references/styles.md` to select a direction or combine compatible principles. Explain the choice briefly before implementation when the task is substantial.
 
 A style name is not a design system. Define the actual decisions: composition, density, typography, color roles, surfaces, borders, imagery, spacing, and interaction behavior.
 
-### 4. Define the design system
+### 5. Define the design system
 
 Use `references/color-and-type.md` and create project-appropriate tokens for:
 
@@ -60,11 +74,11 @@ Choose colors by role and contrast, not by filling the interface with accents. K
 
 Prefer fonts already available in the project or reliable system stacks. Do not add a remote font dependency without a reason. Use a type scale with clear hierarchy and sensible line lengths.
 
-### 5. Plan the page
+### 6. Plan the page
 
 Decide the information hierarchy and page composition before building components. Consider the actual content, empty states, loading states, errors, and responsive behavior. Avoid repeating the same layout on every page when their jobs differ.
 
-### 6. Implement
+### 7. Implement
 
 Build with the project's existing framework and conventions. Use semantic HTML and accessible controls. Reuse components when they represent the same pattern, not merely because they look similar.
 
@@ -72,15 +86,23 @@ Use real content or realistic content shaped like the product's domain. Avoid fi
 
 Do not silently remove existing functionality. Keep interactions functional and include keyboard focus states. Make responsive decisions intentionally rather than shrinking a desktop layout until it fits.
 
-### 7. Review the rendered result
+### 8. Review the rendered result
 
 Use the available browser, preview, or screenshot workflow when one exists. Inspect at least the primary desktop view and a narrow mobile view for substantial page work. If visual inspection is unavailable, say so and perform a code-level review without presenting it as a visual review.
 
-Use `references/review-checklist.md`. Look for hierarchy, alignment, rhythm, density, contrast, responsive behavior, content fit, and consistency. Fix the most visible issues, then inspect again when practical.
+Use `references/review-checklist.md`. Look for hierarchy, alignment, rhythm, density, contrast, responsive behavior, content fit, and consistency. Check the page against the project's Design DNA, not just generic design principles. Fix the most visible issues, then inspect again when practical.
 
-### 8. Report
+### 9. Update the Design DNA and report
 
-Summarize what changed, the chosen direction, checks performed, and any remaining visual limitations. Be specific. Never say a page is polished or verified if it was not inspected.
+After implementation:
+
+- Update the Design DNA only if a durable design decision was added, corrected, or explicitly approved.
+- Keep page-specific exceptions local unless they should become a product-wide rule.
+- Record meaningful changes in the decision log, including the reason and affected areas.
+- Do not change the document just because implementation temporarily deviated from it; fix the deviation or explain why an exception is needed.
+- Summarize what changed, the chosen direction, checks performed, and any remaining visual limitations.
+
+Never say a page is polished or verified if it was not inspected.
 
 ## Delegation
 
@@ -96,5 +118,7 @@ Do not invoke all three automatically for a small change. Delegate only well-sco
 
 - `references/styles.md` — visual directions and when to use them
 - `references/color-and-type.md` — palette and typography decisions
+- `references/design-dna.md` — how to create and maintain a persistent project design contract
 - `references/review-checklist.md` — implementation and visual review criteria
 - `examples/design-brief.md` — a compact design brief format
+- `examples/DESIGN-DNA.md` — a starting template for the project's Design DNA
