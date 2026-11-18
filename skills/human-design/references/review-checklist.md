@@ -6,6 +6,14 @@
 - Does the visual direction suit the product and its audience?
 - Is the content specific to the product rather than generic placeholder material?
 
+## Design DNA
+
+- Was the existing Design DNA read before substantial design work?
+- Do the page's tokens, typography, surfaces, and interaction patterns follow it?
+- Are deviations intentional and limited to the page where they are needed?
+- Were durable decisions recorded without turning the document into a component inventory?
+- Are unresolved decisions clearly distinguished from confirmed rules?
+
 ## Hierarchy and composition
 
 - Is there a clear first, second, and third level of attention?
