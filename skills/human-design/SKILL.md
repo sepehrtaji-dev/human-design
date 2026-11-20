@@ -37,6 +37,15 @@ Determine what the user is asking for:
 
 Do not treat every existing-design task as a request for a full redesign. When the user asks to fix problems, preserve the current product identity and improve the implementation with the smallest coherent set of changes. If the requested outcome is ambiguous between critique and implementation, ask one short question.
 
+These paths are mutually exclusive starting points, not a sequence of workflows to run one after another:
+
+- **Create** continues to product understanding, Design DNA, visual direction, system definition, planning, implementation, and review.
+- **Redesign** continues through product understanding and Design DNA, then establishes an intentionally revised direction before implementation.
+- **Audit and improve** follows the complete audit path below and then goes directly to the final report. Do not continue into the new-page visual-direction, design-system-definition, or page-planning steps unless a diagnosed issue actually requires that work.
+- **Review only** ends with findings and recommendations. Do not edit files.
+
+Shared review and reporting guidance may still be used by every path.
+
 ### 3. Audit and improve an existing design
 
 Use this path when the user hands over an existing interface and expects the agent to identify what makes it feel weak, inconsistent, unfinished, confusing, or visually poor, then fix those issues.
@@ -95,6 +104,8 @@ Fix critical and major findings first. Address minor findings when they are low-
 - Report the most important findings, what was changed, what was retested, and any remaining limitations. Never claim a problem was fixed without checking the relevant result.
 
 For a user-provided screenshot or mockup without source access, inspect and explain the visible issues. Do not claim to have implemented fixes in the product. Ask for the relevant project files or repository when implementation is expected.
+
+**This is the end of the Audit and improve execution path.** After verification, go directly to the final report. Do not run the Create or Redesign workflow as a follow-up. Revisit a shared component, token, or Design DNA only when a specific finding requires it.
 
 ### 4. Understand the product
 
