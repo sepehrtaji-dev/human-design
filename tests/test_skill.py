@@ -40,7 +40,7 @@ class SkillStructureTests(unittest.TestCase):
         audit_end = self.skill.index("This is the end of the Audit and improve execution path.")
         create_workflow = self.skill.index("### 4. Understand the product")
         self.assertLess(audit_end, create_workflow)
-        self.assertIn("goes directly to the final report", self.skill[audit_end:create_workflow])
+        self.assertIn("go directly to the final report", self.skill[audit_end:create_workflow])
 
     def test_audit_contains_full_repair_loop(self) -> None:
         required = (
