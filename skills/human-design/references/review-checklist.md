@@ -1,5 +1,20 @@
 # Design review checklist
 
+## Existing design diagnosis
+
+- Was the current implementation inspected before edits?
+- Is the product's purpose, audience, and primary task understood?
+- Were actual design defects distinguished from subjective style preferences?
+- Were hierarchy, composition, alignment, spacing, typography, color, contrast, density, content fit, components, imagery, responsive behavior, and usability considered?
+- Does each finding describe the affected area, its impact, and a concrete correction?
+- Were findings prioritized instead of treating every visual difference as equally important?
+- Were existing brand decisions, useful patterns, content, and working behavior preserved?
+- Were fixes made at the right level (shared token/component when appropriate) rather than through scattered overrides?
+- Was the full redesign avoided unless the user requested it or the findings justified it?
+- Were changed pages rendered and inspected again after repairs?
+- Were desktop/mobile behavior and important interactions rechecked?
+- Are limitations clearly stated when implementation or visual verification was not possible?
+
 ## Product fit
 
 - Is the primary task obvious without explanation?
@@ -27,6 +42,13 @@
 - Is the accent used with restraint?
 - Is text readable on every surface, including muted and disabled states?
 - Do type sizes, weights, and line lengths create a useful hierarchy?
+
+## Contrast and accessibility evidence
+
+- Was normal text checked against a minimum WCAG AA contrast ratio of 4.5:1, and large text against 3:1?
+- Were meaningful non-text controls and visual indicators checked for sufficient contrast (3:1 against adjacent colors where WCAG applies)?
+- Were keyboard focus, accessible names, semantic structure, and reduced-motion behavior checked where relevant?
+- Are contrast or accessibility findings tied to the actual foreground/background pair or affected control, rather than vague labels such as "low contrast"?
 
 ## Components and interaction
 
