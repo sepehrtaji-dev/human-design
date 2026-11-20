@@ -43,6 +43,13 @@
 - Is text readable on every surface, including muted and disabled states?
 - Do type sizes, weights, and line lengths create a useful hierarchy?
 
+## Contrast and accessibility evidence
+
+- Was normal text checked against a minimum WCAG AA contrast ratio of 4.5:1, and large text against 3:1?
+- Were meaningful non-text controls and visual indicators checked for sufficient contrast (3:1 against adjacent colors where WCAG applies)?
+- Were keyboard focus, accessible names, semantic structure, and reduced-motion behavior checked where relevant?
+- Are contrast or accessibility findings tied to the actual foreground/background pair or affected control, rather than vague labels such as "low contrast"?
+
 ## Components and interaction
 
 - Do controls look and behave like controls?
