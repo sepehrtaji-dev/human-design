@@ -42,6 +42,16 @@ For projects with multiple pages, HumanDesign can create a `design/DESIGN-DNA.md
 - A quality checklist for reviewing real pages and screenshots
 - Three optional Claude Code subagents for research, design systems, and visual review
 
+## Validate
+
+Run the local checks with:
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+The suite checks the skill structure and references, keeps the task paths separate, and exercises the installer for Claude Code, Codex, both targets, and invalid input in temporary home directories. GitHub Actions runs the same checks on pushes and pull requests.
+
 ## Compatibility
 
 The skill follows the open Agent Skills format. It can be used by compatible agents that support skills. The included subagent definitions use Claude Code's `.claude/agents/` format.
