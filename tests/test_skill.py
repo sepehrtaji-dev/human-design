@@ -32,7 +32,8 @@ class SkillStructureTests(unittest.TestCase):
         self.assertTrue(references)
         for relative in references:
             with self.subTest(path=relative):
-                self.assertTrue((SKILL.parent / relative).is_file())
+                target = ROOT / relative if relative.startswith("examples/") else SKILL.parent / relative
+                self.assertTrue(target.is_file())
 
     def test_task_paths_are_explicit_and_independent(self) -> None:
         self.assertIn("These paths are mutually exclusive starting points", self.skill)
